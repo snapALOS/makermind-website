@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#F7F5F0" />
+  <meta name="description" content="A look into the architecture of the operating system designed specifically for artisans. Why generic ERPs fail makers, and what we're doing differently." />
+  <title>The Maker's OS — MakerMind Dispatches</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav class="nav" id="nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand" aria-label="MakerMind home">
+      <svg class="nav-mark" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="142" y="172" width="38" height="252" fill="currentColor"/>
+        <rect x="120" y="172" width="22" height="14" fill="currentColor"/>
+        <rect x="126" y="186" width="14" height="8" fill="currentColor"/>
+        <rect x="332" y="172" width="38" height="252" fill="currentColor"/>
+        <rect x="370" y="172" width="22" height="14" fill="currentColor"/>
+        <rect x="370" y="186" width="14" height="8" fill="currentColor"/>
+        <path d="M 161 182 L 256 324 L 351 182" stroke="currentColor" stroke-width="38" stroke-linejoin="bevel" fill="none"/>
+        <path d="M 190 362 Q 256 418 322 362" stroke="#BFBAB0" stroke-width="5" stroke-linecap="round" fill="none"/>
+        <circle cx="256" cy="324" r="36" fill="#D44D26"/>
+        <line x1="256" y1="362" x2="256" y2="472" stroke="#D44D26" stroke-width="12" stroke-dasharray="14 14"/>
+      </svg>
+      <span class="nav-wordmark">MakerMind<span class="accent">*</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="journal.html" class="nav-link">Journal</a>
+      <a href="index.html#waitlist" class="nav-cta">Join the Waitlist</a>
+    </div>
+  </div>
+</nav>
+
+<header class="dispatch-hero container">
+  <a href="journal.html" class="dispatch-back">← Back to Dispatches</a>
+  <div class="dispatch-meta">
+    <span>February 2026</span>
+    <span class="accent">/</span>
+    <span>Protocol</span>
+  </div>
+  <h1 class="dispatch-title">The <em>Maker&rsquo;s OS</em>: Behind the scenes of Studio Protocol v0.1.</h1>
+  <p class="dispatch-subtitle">Why generic ERPs fail makers, and what we're doing differently.</p>
+  <img src="assets/dispatch-protocol.png" alt="Minimalist desk with laptop" class="dispatch-hero-img" />
+</header>
+
+<main class="dispatch-body">
+  <p class="drop-cap">We didn't set out to build software. We set out to solve a problem that every artisan maker faces the moment they move beyond hobby scale: the business side of making is a mess. Not because makers are disorganized — most studios we've studied are remarkably disciplined in their craft. The mess is in the tools. Or rather, the absence of them.</p>
+
+  <p>The typical maker studio runs on a patchwork. Etsy for one channel. Shopify for another. A spreadsheet for inventory — maybe two. Google Sheets for pricing. A notebook for production planning. QuickBooks for the accountant. Instagram for marketing. And a growing sense that every system is a silo, and none of them speak the same language.</p>
+
+  <p>We've met makers running six-figure studios from a combination of Post-It notes and memory. It works — until it doesn't. Until a supplier raises prices and you can't quickly calculate the margin impact across 40 products. Until you accept a wholesale order without realizing you don't have enough raw materials to fulfill it. Until tax season arrives and you spend three weekends reconciling numbers that should have been automatic.</p>
+
+  <h2>Why enterprise tools <em>don't work.</em></h2>
+
+  <p>The obvious response is: "Just use an ERP." Enterprise Resource Planning systems have solved this problem for large manufacturers for decades. SAP, Oracle, NetSuite — these platforms integrate inventory, production, finance, and sales into a single system. The problem is that they were designed for factories with procurement departments, not studios with a single maker and a heat gun.</p>
+
+  <ul>
+    <li><strong>Complexity:</strong> Most ERPs require weeks of configuration and training. A solo maker doesn't have weeks. They have Tuesdays.</li>
+    <li><strong>Vocabulary:</strong> ERPs speak the language of supply chain management — BOMs, MRP, WIP tracking, demand forecasting. Makers speak the language of batches, pours, cures, and market prep.</li>
+    <li><strong>Scale assumptions:</strong> ERPs assume thousands of SKUs, multiple warehouses, and dedicated operations staff. Artisan studios have 20–200 products, one room, and the maker is the operations staff.</li>
+    <li><strong>Price:</strong> Even "small business" ERPs start at $100–$500/month. For a studio running on thin margins, that's a material expense — and one that's hard to justify when the tool doesn't speak your language.</li>
+  </ul>
+
+  <p>The result is a gap in the market that nobody has filled well. Makers are too sophisticated for basic tools and too human-scale for enterprise ones. They need something in between — something that understands their workflow, respects their constraints, and gives them the operational clarity that larger businesses take for granted.</p>
+
+  <div class="dispatch-pullquote">
+    <p>"I tried three different inventory systems before giving up. They all wanted me to think like a warehouse manager. I'm a candle maker."</p>
+  </div>
+
+  <h2>The design principles <em>behind MakerMind.</em></h2>
+
+  <p>MakerMind was designed from scratch around five principles that we believe are non-negotiable for artisan tools:</p>
+
+  <h3>1. The maker is the operator.</h3>
+  <p>There is no IT department. No dedicated bookkeeper. No inventory clerk. The person using MakerMind is the same person formulating products, pouring batches, packing orders, and responding to customer DMs. Every feature must be usable by one person with limited time and no training.</p>
+
+  <h3>2. Data flows automatically.</h3>
+  <p>If you log a production batch, your raw materials should decrement and your finished goods should increment — automatically. If you process a sale, your inventory should update, your revenue should track, and your COGS should calculate — without you touching a spreadsheet. The system should be the single source of truth, not a secondary record you have to update manually.</p>
+
+  <h3>3. Intelligence, not automation.</h3>
+  <p>There's a difference between automating a task and making it intelligent. Automation replaces human action. Intelligence enhances human judgment. MakerMind doesn't make decisions for you — it gives you the information you need to make better decisions faster. When should you reorder jars? What's your most profitable product after labor? Which channel is driving the highest margins? These are questions you should be able to answer in seconds, not hours.</p>
+
+  <h3>4. Beauty is not optional.</h3>
+  <p>Artisans care about aesthetics. Their packaging is beautiful. Their studio photography is intentional. Their brand is curated. The software they use should meet the same standard. MakerMind looks and feels like a product made by people who understand design — because it was. Every screen, every interaction, every notification was designed to feel worthy of the creative work it supports.</p>
+
+  <h3>5. Start free, scale honestly.</h3>
+  <p>Most makers start small. Their first concern isn't advanced analytics — it's knowing what they have and what it costs. MakerMind is free to start, with paid features that unlock as your studio grows and your needs become more sophisticated. You'll never pay for features you don't use, and you'll never be surprised by a pricing change.</p>
+
+  <h2>What <em>v0.1</em> includes.</h2>
+
+  <p>Studio Protocol v0.1 is the foundation. It covers the four pillars that every studio needs to operate clearly:</p>
+
+  <ul>
+    <li><strong>Inventory:</strong> Track raw materials and finished goods in a single view. Know what you have, what you need, and what you can make with what's on hand.</li>
+    <li><strong>COGS:</strong> Calculate true per-unit costs including materials, packaging, labor, and waste. Price with confidence instead of guesswork.</li>
+    <li><strong>Production:</strong> Plan batches, track progress, and automatically update inventory when production is complete.</li>
+    <li><strong>Orders:</strong> Manage incoming orders across channels, track fulfillment, and see revenue and margin data in real time.</li>
+  </ul>
+
+  <p>Future versions will add demand forecasting, AI-powered product listing generation, supplier management, and multi-channel sync. But v0.1 is about getting the foundation right — because if the data at the base is clean, everything built on top of it will be reliable.</p>
+
+  <p>This is the operating system your studio has been waiting for. Not because it does everything — but because it does the right things, the right way, for the way you actually work.</p>
+
+  <div class="dispatch-divider"></div>
+
+  <div class="dispatch-end-cta">
+    <p>Continue reading the dispatches</p>
+    <a href="journal.html" class="btn btn-ink">
+      <span class="btn-label">View All Dispatches</span>
+      <span class="btn-arrow" aria-hidden="true">→</span>
+    </a>
+  </div>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-top">
+    <a href="index.html" class="footer-brand" aria-label="MakerMind home">
+      <svg class="footer-mark" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="142" y="172" width="38" height="252" fill="currentColor"/>
+        <rect x="120" y="172" width="22" height="14" fill="currentColor"/>
+        <rect x="126" y="186" width="14" height="8" fill="currentColor"/>
+        <rect x="332" y="172" width="38" height="252" fill="currentColor"/>
+        <rect x="370" y="172" width="22" height="14" fill="currentColor"/>
+        <rect x="370" y="186" width="14" height="8" fill="currentColor"/>
+        <path d="M 161 182 L 256 324 L 351 182" stroke="currentColor" stroke-width="38" stroke-linejoin="bevel" fill="none"/>
+        <path d="M 190 362 Q 256 418 322 362" stroke="#4a4640" stroke-width="5" stroke-linecap="round" fill="none"/>
+        <circle cx="256" cy="324" r="36" fill="#D44D26"/>
+        <line x1="256" y1="362" x2="256" y2="472" stroke="#D44D26" stroke-width="12" stroke-dasharray="14 14"/>
+      </svg>
+      <span class="footer-wordmark">MakerMind<span class="accent">*</span></span>
+    </a>
+    <nav class="footer-links" aria-label="Footer links">
+      <a href="https://twitter.com/makermindai" class="footer-link" target="_blank" rel="noopener">Twitter</a>
+      <a href="https://instagram.com/makermindai" class="footer-link" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://producthunt.com" class="footer-link" target="_blank" rel="noopener">ProductHunt</a>
+      <a href="mailto:hello@makermind.ai" class="footer-link">Contact</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-rule" aria-hidden="true"></div>
+    <div class="footer-meta">
+      <span class="footer-stamp">Studio Protocol v0.1 — Coming Soon</span>
+      <span class="footer-copy">© 2026 MakerMind. For the modern studio.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
