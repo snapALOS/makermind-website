@@ -12,9 +12,9 @@
 :root {
   /* Color palette — mirrors src/index.css */
   --bg:        #F7F5F0;
-  --ink:       #1C1C1C;
-  --accent:    #D44D26;
-  --muted:     #8C887D;
+  --ink:       #2A1F1A;
+  --accent:    #C47B6A;
+  --muted:     #68635A;
   --border:    #E2DFD6;
   --sidebar:   #EFEDE8;
   --night:     #0B0A08;
@@ -78,10 +78,10 @@ ul { list-style: none; }
   padding: 0 var(--pad-x);
 }
 .section-label {
-  font-family: var(--mono);
-  font-weight: 700;
-  font-size: 0.6875rem;
-  letter-spacing: 0.32em;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--muted);
   margin-bottom: 32px;
@@ -159,8 +159,8 @@ ul { list-style: none; }
   gap: 32px;
 }
 .nav-link {
-  font-family: var(--mono);
-  font-size: 0.6875rem;
+  font-family: var(--sans);
+  font-size: 0.8125rem;
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -245,10 +245,10 @@ ul { list-style: none; }
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  font-family: var(--mono);
-  font-weight: 700;
-  font-size: 0.6875rem;
-  letter-spacing: 0.28em;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.10em;
   text-transform: uppercase;
   color: var(--muted);
   margin-bottom: 56px;
@@ -288,6 +288,7 @@ ul { list-style: none; }
   animation: mark-draw 0.8s var(--ease) 1.7s forwards;
 }
 .mark-thread {
+  stroke: var(--accent);
   stroke-dasharray: 140;
   stroke-dashoffset: 140;
   opacity: 0;
@@ -296,6 +297,7 @@ ul { list-style: none; }
     mark-draw 0.6s var(--ease) 2.0s forwards;
 }
 .mark-dot {
+  fill: var(--accent);
   opacity: 0;
   transform: scale(0);
   transform-origin: 256px 324px;
@@ -438,6 +440,7 @@ ul { list-style: none; }
   margin-bottom: 12px;
 }
 .email-note {
+  font-size: 0.8125rem;
   font-family: var(--sans);
   font-size: 0.8125rem;
   color: var(--muted);
@@ -691,7 +694,7 @@ ul { list-style: none; }
 }
 .problem-title em { font-style: italic; font-weight: 700; }
 .problem-body {
-  font-size: 0.9375rem;
+  font-size: 1rem;
   line-height: 1.7;
   color: var(--muted);
 }
@@ -799,7 +802,8 @@ ul { list-style: none; }
 }
 .step-inner { max-width: 540px; }
 .step-label {
-  font-family: var(--mono);
+  font-family: var(--sans);
+  font-size: 0.8125rem;
   font-weight: 700;
   font-size: 0.6875rem;
   letter-spacing: 0.32em;
@@ -836,9 +840,9 @@ ul { list-style: none; }
   gap: 12px;
 }
 .step-list li {
-  font-family: var(--mono);
-  font-size: 0.8125rem;
-  letter-spacing: 0.04em;
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  letter-spacing: 0.01em;
   color: var(--muted);
   display: flex;
   align-items: center;
@@ -905,7 +909,7 @@ ul { list-style: none; }
 }
 .feature-title em { font-style: italic; font-weight: 700; }
 .feature-body {
-  font-size: 0.9375rem;
+  font-size: 1rem;
   line-height: 1.7;
   color: var(--muted);
 }
@@ -943,7 +947,7 @@ ul { list-style: none; }
   gap: 56px;
 }
 .pos-label {
-  font-family: var(--mono);
+  font-family: var(--sans);
   font-weight: 700;
   font-size: 0.6875rem;
   letter-spacing: 0.32em;
@@ -1091,6 +1095,29 @@ ul { list-style: none; }
   position: absolute;
   inset: 0;
   background: radial-gradient(ellipse at center, transparent 0%, var(--night) 80%);
+}
+.final-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--pad-x);
+}
+.final-lifestyle {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4/5;
+  max-height: 580px;
+  box-shadow: var(--shadow-lg);
+}
+.final-lifestyle-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 .final-inner {
   position: relative;
@@ -1692,7 +1719,7 @@ ul { list-style: none; }
 .how-step { display: flex; flex-direction: column; gap: 24px; }
 .how-num { font-family: var(--mono); font-size: 0.75rem; color: var(--muted); }
 .how-title { font-family: var(--serif); font-size: 1.5rem; font-weight: 500; font-style: italic; }
-.how-body { font-size: 0.9375rem; color: var(--muted); line-height: 1.6; }
+.how-body { font-size: 1rem; color: var(--muted); line-height: 1.6; }
 
 /* 6. Social Proof Strip */
 .proof-strip {
@@ -1769,6 +1796,8 @@ ul { list-style: none; }
 
 /* Mobile Adaptations */
 @media (max-width: 900px) {
+  .final-grid { grid-template-columns: 1fr; }
+  .final-lifestyle { display: none; }
   .how-grid { grid-template-columns: 1fr; gap: 40px; }
   .ui-frame { aspect-ratio: auto; min-height: 500px; }
   .ui-sidebar { display: none; }
