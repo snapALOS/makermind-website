@@ -6,12 +6,24 @@
   <meta name="theme-color" content="#F7F5F0" />
   <meta name="description" content="Most makers know what they charge. Far fewer know exactly what it costs to produce a single unit. We break down the hidden drains on your studio's profitability." />
   <title>The Margin Mystery — MakerMind Dispatches</title>
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="The Margin Mystery — MakerMind Dispatches" />
+  <meta property="og:description" content="Most makers know what they charge. Far fewer know what it costs. We break down the hidden drains on your studio profitability." />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Margin Mystery — MakerMind" />
+  <meta name="twitter:description" content="Most makers know what they charge. Far fewer know what it costs." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg viewBox='0 0 512 512' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='512' height='512' rx='100' fill='%23F7F5F0'/%3E%3Crect x='142' y='172' width='38' height='252' fill='%231C1C1C'/%3E%3Crect x='120' y='172' width='22' height='14' fill='%231C1C1C'/%3E%3Crect x='332' y='172' width='38' height='252' fill='%231C1C1C'/%3E%3Crect x='370' y='172' width='22' height='14' fill='%231C1C1C'/%3E%3Cpath d='M161 182L256 324L351 182' stroke='%231C1C1C' stroke-width='38' stroke-linejoin='bevel' fill='none'/%3E%3Ccircle cx='256' cy='324' r='36' fill='%23D44D26'/%3E%3C/svg%3E" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+<div class="progress-bar" id="progress-bar"></div>
 
 <nav class="nav" id="nav" aria-label="Primary">
   <div class="nav-inner">
@@ -31,6 +43,10 @@
       <span class="nav-wordmark">MakerMind<span class="accent">*</span></span>
     </a>
     <div class="nav-links">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sun-icon"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="moon-icon" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      </button>
       <a href="journal.html" class="nav-link">Maker Dispatches</a>
       <a href="index.html#waitlist" class="nav-cta">Join the Waitlist</a>
     </div>
@@ -40,7 +56,7 @@
 <header class="dispatch-hero container">
   <a href="journal.html" class="dispatch-back">← Back to Dispatches</a>
   <div class="dispatch-meta">
-    <span>April 2026</span>
+    <span>April 24, 2026</span>
     <span class="accent">/</span>
     <span>Margins</span>
   </div>
@@ -121,15 +137,15 @@
         <rect x="370" y="172" width="22" height="14" fill="currentColor"/>
         <rect x="370" y="186" width="14" height="8" fill="currentColor"/>
         <path d="M 161 182 L 256 324 L 351 182" stroke="currentColor" stroke-width="38" stroke-linejoin="bevel" fill="none"/>
-        <path d="M 190 362 Q 256 418 322 362" stroke="#4a4640" stroke-width="5" stroke-linecap="round" fill="none"/>
+        <path d="M 190 362 Q 256 418 322 362" stroke="#BFBAB0" stroke-width="5" stroke-linecap="round" fill="none"/>
         <circle cx="256" cy="324" r="36" fill="#D44D26"/>
         <line x1="256" y1="362" x2="256" y2="472" stroke="#D44D26" stroke-width="12" stroke-dasharray="14 14"/>
       </svg>
       <span class="footer-wordmark">MakerMind<span class="accent">*</span></span>
     </a>
     <nav class="footer-links" aria-label="Footer links">
-      <a href="https://twitter.com/makermindai" class="footer-link" target="_blank" rel="noopener">Twitter</a>
-      <a href="https://instagram.com/makermindai" class="footer-link" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://x.com/MakerMind_AI" class="footer-link" target="_blank" rel="noopener"><svg class="footer-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg><span>Twitter</span></a>
+      <a href="https://www.instagram.com/makermind.ai/" class="footer-link" target="_blank" rel="noopener"><svg class="footer-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.247 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.332 2.633-1.308 3.608-.975.975-2.242 1.247-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.247-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.247 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.977 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.351-.2 6.78-2.618 6.98-6.98.058-1.28.072-1.689.072-4.948s-.014-3.667-.072-4.947c-.2-4.361-2.618-6.78-6.98-6.98C15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg><span>Instagram</span></a>
       <a href="https://producthunt.com" class="footer-link" target="_blank" rel="noopener">ProductHunt</a>
       <a href="mailto:hello@makermind.ai" class="footer-link">Contact</a>
     </nav>

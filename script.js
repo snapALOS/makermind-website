@@ -290,8 +290,8 @@ document.querySelectorAll('[data-form]').forEach((form) => {
     const r = hero.getBoundingClientRect();
     const x = (e.clientX - r.left) / r.width  - 0.5;
     const y = (e.clientY - r.top)  / r.height - 0.5;
-    targetX = x * 8;   // up to 8 degrees of yaw
-    targetY = y * 8;   // up to 8 degrees of pitch
+    targetX = x * 8;
+    targetY = y * 8;
     if (!raf) raf = requestAnimationFrame(update);
   });
 
@@ -301,3 +301,55 @@ document.querySelectorAll('[data-form]').forEach((form) => {
     if (!raf) raf = requestAnimationFrame(update);
   });
 })();
+
+
+/* ── 8. NEW FUNCTIONAL UPGRADES ──────────────────────────── */
+
+/* A. Dark Mode Toggle */
+(function initTheme() {
+  const themeToggle = document.getElementById('theme-toggle');
+  const sunIcon = document.querySelector('.sun-icon');
+  const moonIcon = document.querySelector('.moon-icon');
+  
+  const getTheme = () => localStorage.getItem('theme') || 'light';
+  const setTheme = (theme) => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    if (sunIcon && moonIcon) {
+      sunIcon.style.display = theme === 'dark' ? 'none' : 'block';
+      moonIcon.style.display = theme === 'dark' ? 'block' : 'none';
+    }
+  };
+
+  setTheme(getTheme());
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      setTheme(getTheme() === 'dark' ? 'light' : 'dark');
+    });
+  }
+})();
+
+/* B. Logo Animation & Parallax Hero */
+window.addEventListener('load', () => {
+  document.querySelector('.nav-mark')?.classList.add('animate');
+});
+
+const heroParallax = document.getElementById('hero-parallax');
+if (heroParallax) {
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    heroParallax.style.transform = `translateY(${y * 0.4}px)`;
+  }, { passive: true });
+}
+
+/* C. Reading Progress Bar */
+const progressBar = document.getElementById('progress-bar');
+if (progressBar) {
+  window.addEventListener('scroll', () => {
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = (window.scrollY / total) * 100;
+    progressBar.style.width = `${progress}%`;
+  }, { passive: true });
+}
+
