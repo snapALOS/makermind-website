@@ -6,7 +6,7 @@
    Formspree endpoint: https://formspree.io/f/myklvypr
 ═══════════════════════════════════════════════════════════════ */
 
-const SIGNUP_API_URL = '/api/signup';
+const SIGNUP_API_URL = 'https://makermind-newsletter-automation.vercel.app/api/signup';
 
 
 /* ── 1. SCROLL REVEAL ─────────────────────────────────────── */
