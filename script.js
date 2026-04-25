@@ -1,9 +1,9 @@
 /* ═══════════════════════════════════════════════════════════════
    MakerMind — Waitlist Site v2.0
    Cinematic orchestration: scroll reveals, sticky showcase,
-   parallax film loop, modal video, form submission to Formspree.
+   parallax film loop, modal video, form submission to custom API.
    ─────────────────────────────────────────────────────────────
-   Formspree endpoint: https://formspree.io/f/myklvypr
+   Signup endpoint: https://makermind-newsletter-automation.vercel.app/api/signup
 ═══════════════════════════════════════════════════════════════ */
 
 const SIGNUP_API_URL = 'https://makermind-newsletter-automation.vercel.app/api/signup';
@@ -206,13 +206,12 @@ function showSuccessState(form) {
 }
 
 async function submitEmail(email, source) {
-  const res = await fetch(FORMSPREE_URL, {
+  const res = await fetch(SIGNUP_API_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
     body: JSON.stringify({
       email,
       _source: source,
-      _subject: `New MakerMind signup — ${source}`,
     }),
   });
   return res.ok;
