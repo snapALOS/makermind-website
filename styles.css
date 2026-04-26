@@ -141,7 +141,7 @@ ul { list-style: none; }
   gap: 10px;
 }
 .nav-mark {
-  width: 26px; height: 26px;
+  width: 32px; height: 32px;
   color: var(--ink);
   flex-shrink: 0;
 }
@@ -275,8 +275,8 @@ ul { list-style: none; }
 
 /* Animated MakerMind mark */
 .hero-mark {
-  width: 140px;
-  height: 140px;
+  width: 360px;
+  height: 360px;
   color: var(--ink);
   margin: 0 auto 32px;
   overflow: visible;
@@ -1170,7 +1170,7 @@ ul { list-style: none; }
   gap: 10px;
 }
 .footer-mark {
-  width: 26px; height: 26px;
+  width: 32px; height: 32px;
   color: rgba(247,245,240,0.55);
   flex-shrink: 0;
 }
@@ -1408,7 +1408,7 @@ ul { list-style: none; }
   :root { --pad-x: 28px; --section: 96px; }
 
   .hero { padding-bottom: 80px; }
-  .hero-mark { width: 110px; height: 110px; }
+  .hero-mark { width: 280px; height: 280px; }
   .br-desk { display: none; }
 
   .problem-grid,

@@ -44,20 +44,9 @@
 <nav class="nav" id="nav" aria-label="Primary">
   <div class="nav-inner">
     <a href="#" class="nav-brand" aria-label="MakerMind home">
-      <svg class="nav-mark" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <g class="mark-strokes">
-          <rect x="142" y="172" width="38" height="252" fill="currentColor"/>
-          <rect x="120" y="172" width="22" height="14" fill="currentColor"/>
-          <rect x="126" y="186" width="14" height="8" fill="currentColor"/>
-          <rect x="332" y="172" width="38" height="252" fill="currentColor"/>
-          <rect x="370" y="172" width="22" height="14" fill="currentColor"/>
-          <rect x="370" y="186" width="14" height="8" fill="currentColor"/>
-          <path d="M 161 182 L 256 324 L 351 182" stroke="currentColor" stroke-width="38" stroke-linejoin="bevel" fill="none"/>
-        </g>
-        <path class="mark-arc" d="M 190 362 Q 256 418 322 362" stroke="#BFBAB0" stroke-width="5" stroke-linecap="round" fill="none"/>
-        <circle class="mark-dot" cx="256" cy="324" r="36" fill="#C47B6A"/>
-        <line class="mark-thread" x1="256" y1="362" x2="256" y2="472" stroke="#C47B6A" stroke-width="12" stroke-dasharray="14 14"/>
-      </svg>
+      <video class="nav-mark" autoplay muted playsinline aria-hidden="true">
+        <source src="assets/LogoBookOpen_White.mp4" type="video/mp4" />
+      </video>
       <span class="nav-wordmark">MakerMind<span class="accent">*</span></span>
     </a>
     <div class="nav-links">
@@ -88,27 +77,9 @@
         <span>Coming Soon</span>
       </div>
 
-      <svg class="hero-mark" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="MakerMind logo" data-anim="mark">
-        <defs>
-          <clipPath id="hero-mark-wipe">
-            <rect x="0" y="170" width="512" height="0">
-              <animate attributeName="height" from="0" to="280" begin="0.6s" dur="1.4s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.33 0 0.2 1"/>
-            </rect>
-          </clipPath>
-        </defs>
-        <g clip-path="url(#hero-mark-wipe)">
-          <rect x="142" y="172" width="38" height="252" fill="currentColor"/>
-          <rect x="120" y="172" width="22" height="14" fill="currentColor"/>
-          <rect x="126" y="186" width="14" height="8" fill="currentColor"/>
-          <rect x="332" y="172" width="38" height="252" fill="currentColor"/>
-          <rect x="370" y="172" width="22" height="14" fill="currentColor"/>
-          <rect x="370" y="186" width="14" height="8" fill="currentColor"/>
-          <path d="M 161 182 L 256 324 L 351 182" stroke="currentColor" stroke-width="38" stroke-linejoin="bevel" fill="none"/>
-        </g>
-        <path class="mark-arc" d="M 190 362 Q 256 418 322 362" stroke="#BFBAB0" stroke-width="5" stroke-linecap="round" fill="none"/>
-        <circle class="mark-dot" cx="256" cy="324" r="36" fill="#C47B6A"/>
-        <line class="mark-thread" x1="256" y1="362" x2="256" y2="472" stroke="#C47B6A" stroke-width="12" stroke-dasharray="14 14"/>
-      </svg>
+      <video class="hero-mark" autoplay muted playsinline aria-label="MakerMind logo animation">
+        <source src="assets/LogoBookOpen_White.mp4" type="video/mp4" />
+      </video>
 
       <div class="hero-wordmark" data-anim="wordmark">makermind ai<span class="accent">*</span></div>
       <div class="hero-rule" data-anim="rule" aria-hidden="true"></div>
@@ -162,7 +133,7 @@
   </div>
 
   <div class="film-frame reveal" data-film>
-    <video class="film-video" poster="assets/launch-poster.jpg" autoplay muted loop playsinline data-film-loop>
+    <video class="film-video" poster="assets/launch-poster.jpg" autoplay muted playsinline data-film-loop>
       <source src="assets/launch-loop.mp4" type="video/mp4" />
     </video>
     <div class="film-overlay">
@@ -468,20 +439,9 @@
 
     <aside class="newsletter-card reveal">
       <header class="newsletter-card-header">
-        <svg class="newsletter-mark" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <g class="mark-strokes">
-            <rect x="142" y="172" width="38" height="252" fill="currentColor"/>
-            <rect x="120" y="172" width="22" height="14" fill="currentColor"/>
-            <rect x="126" y="186" width="14" height="8" fill="currentColor"/>
-            <rect x="332" y="172" width="38" height="252" fill="currentColor"/>
-            <rect x="370" y="172" width="22" height="14" fill="currentColor"/>
-            <rect x="370" y="186" width="14" height="8" fill="currentColor"/>
-            <path d="M 161 182 L 256 324 L 351 182" stroke="currentColor" stroke-width="38" stroke-linejoin="bevel" fill="none"/>
-          </g>
-          <path class="mark-arc" d="M 190 362 Q 256 418 322 362" stroke="#BFBAB0" stroke-width="5" stroke-linecap="round" fill="none"/>
-          <circle cx="256" cy="324" r="36" fill="#C47B6A"/>
-          <line x1="256" y1="362" x2="256" y2="472" stroke="#C47B6A" stroke-width="12" stroke-dasharray="14 14"/>
-        </svg>
+        <video class="newsletter-mark" autoplay muted playsinline aria-hidden="true">
+          <source src="assets/LogoBookOpen_White.mp4" type="video/mp4" />
+        </video>
         <div>
           <p class="newsletter-title">Studio Protocol</p>
           <p class="newsletter-sub">by MakerMind</p>
@@ -546,20 +506,9 @@
 <footer class="footer" role="contentinfo">
   <div class="footer-top">
     <a href="#" class="footer-brand" aria-label="MakerMind home">
-      <svg class="footer-mark" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <g class="mark-strokes">
-          <rect x="142" y="172" width="38" height="252" fill="currentColor"/>
-          <rect x="120" y="172" width="22" height="14" fill="currentColor"/>
-          <rect x="126" y="186" width="14" height="8" fill="currentColor"/>
-          <rect x="332" y="172" width="38" height="252" fill="currentColor"/>
-          <rect x="370" y="172" width="22" height="14" fill="currentColor"/>
-          <rect x="370" y="186" width="14" height="8" fill="currentColor"/>
-          <path d="M 161 182 L 256 324 L 351 182" stroke="currentColor" stroke-width="38" stroke-linejoin="bevel" fill="none"/>
-        </g>
-        <path class="mark-arc" d="M 190 362 Q 256 418 322 362" stroke="#BFBAB0" stroke-width="5" stroke-linecap="round" fill="none"/>
-        <circle cx="256" cy="324" r="36" fill="#C47B6A"/>
-        <line x1="256" y1="362" x2="256" y2="472" stroke="#C47B6A" stroke-width="12" stroke-dasharray="14 14"/>
-      </svg>
+      <video class="footer-mark" autoplay muted playsinline aria-hidden="true">
+        <source src="assets/LogoBookOpen_White.mp4" type="video/mp4" />
+      </video>
       <span class="footer-wordmark">MakerMind<span class="accent">*</span></span>
     </a>
     <nav class="footer-links" aria-label="Footer links">
