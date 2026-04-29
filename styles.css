@@ -1448,12 +1448,143 @@ ul { list-style: none; }
 }
 
 @media (max-width: 620px) {
-  .nav-cta { padding: 8px 14px; font-size: 0.75rem; }
+  :root {
+    --nav-h: 72px;
+    --pad-x: 22px;
+    --section: 84px;
+  }
+
+  .nav {
+    position: relative;
+    background: rgba(247, 245, 240, 0.94);
+    backdrop-filter: blur(18px) saturate(1.25);
+    -webkit-backdrop-filter: blur(18px) saturate(1.25);
+    border-bottom-color: var(--border);
+  }
+
+  .nav-inner {
+    padding: 0 16px;
+    gap: 12px;
+    max-width: none;
+    min-width: 0;
+  }
+
+  .nav-brand {
+    min-width: 0;
+    flex: 1 1 auto;
+    gap: 8px;
+  }
+
+  .nav-mark {
+    width: 28px;
+    height: 28px;
+  }
+
+  .nav-wordmark {
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .nav-links {
+    flex: 0 0 auto;
+    gap: 0;
+  }
+
+  .theme-toggle,
+  .nav-link {
+    display: none;
+  }
+
+  .nav-cta {
+    padding: 9px 12px;
+    font-size: 0.8125rem;
+    line-height: 1.1;
+    white-space: normal;
+    max-width: 104px;
+    text-align: center;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 48px var(--pad-x) 48px;
+    justify-content: flex-start;
+  }
+
+  .stamp {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+    max-width: 280px;
+    margin: 0 auto 24px;
+    font-size: 0.6875rem;
+    letter-spacing: 0.16em;
+    line-height: 1.6;
+  }
+
+  .hero-mark {
+    width: min(34vw, 124px);
+    height: min(34vw, 124px);
+    margin-bottom: 18px;
+  }
+
+  .hero-wordmark {
+    margin-bottom: 20px;
+    font-size: 1.35rem;
+  }
+
+  .hero-rule {
+    margin-bottom: 20px;
+  }
+
+  .hero-headline {
+    font-size: clamp(2.05rem, 9.8vw, 2.75rem);
+    line-height: 1.06;
+    gap: 0 0.22em;
+    margin-bottom: 22px;
+  }
+
+  .hero-body {
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    margin-bottom: 24px;
+  }
+
   .features-grid { grid-template-columns: 1fr; }
   .email-row { flex-direction: column; }
+  .email-input,
+  .btn {
+    height: 52px;
+  }
   .email-row .btn { width: 100%; }
-  .hero-headline { gap: 0 0.24em; }
-  .scroll-cue { font-size: 0.5625rem; letter-spacing: 0.28em; }
+  .email-note {
+    font-size: 0.875rem;
+    line-height: 1.45;
+    max-width: 280px;
+    margin: 16px auto 0;
+  }
+
+  .scroll-cue {
+    bottom: 28px;
+    font-size: 0.5625rem;
+    letter-spacing: 0.24em;
+    gap: 12px;
+  }
+
+  .cue-line {
+    height: 32px;
+  }
+
+  .film {
+    padding-top: 56px;
+  }
+
+  .film-meta {
+    margin-bottom: 38px;
+  }
+
   .film-overlay { padding: 16px; }
   .film-play { font-size: 0.625rem; padding: 0 14px; height: 38px; }
 }
@@ -1801,4 +1932,27 @@ ul { list-style: none; }
   .how-grid { grid-template-columns: 1fr; gap: 40px; }
   .ui-frame { aspect-ratio: auto; min-height: 500px; }
   .ui-sidebar { display: none; }
+}
+
+/* Final mobile pass: keep late desktop/theme rules from widening the phone layout. */
+@media (max-width: 620px) {
+  .theme-toggle,
+  .nav-link {
+    display: none;
+  }
+
+  .nav-links {
+    gap: 0;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 48px;
+  }
+
+  .scroll-cue {
+    position: static;
+    transform: none;
+    margin: 26px auto 0;
+  }
 }
