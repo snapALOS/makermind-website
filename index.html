@@ -9,7 +9,7 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="MakerMind — The Artisan's OS for the Modern Studio" />
-  <meta property="og:description" content="The business side of making, beautifully organized. Studio Protocol v0.1 — coming soon." />
+  <meta property="og:description" content="The business side of making, beautifully organized. Studio Protocol v0.1 beta is available for Mac." />
   <meta property="og:image" content="assets/img1.png" />
   <meta property="og:image:width" content="1672" />
   <meta property="og:image:height" content="939" />
@@ -17,7 +17,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="MakerMind — The Artisan's OS" />
-  <meta name="twitter:description" content="The business side of making, beautifully organized." />
+  <meta name="twitter:description" content="The business side of making, beautifully organized. Download the Mac beta." />
   <meta name="twitter:image" content="assets/img1.png" />
 
   <title>MakerMind — The Artisan's OS for the Modern Studio</title>
@@ -55,7 +55,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="moon-icon" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
       </button>
       <a href="journal.html" class="nav-link">Maker Dispatches</a>
-      <a href="#waitlist" class="nav-cta">Join the Waitlist</a>
+      <a href="#download" class="nav-cta">Download Mac Beta</a>
     </div>
   </div>
 </nav>
@@ -74,7 +74,7 @@
         <span class="stamp-dot" aria-hidden="true"></span>
         <span>Studio Protocol v0.1</span>
         <span class="stamp-sep" aria-hidden="true">—</span>
-        <span>Coming Soon</span>
+        <span>Beta Available</span>
       </div>
 
       <video class="hero-mark" autoplay muted playsinline aria-label="MakerMind logo animation">
@@ -99,18 +99,29 @@
         Your materials, batches, orders, and margins — all in one place.
       </p>
 
+      <div class="hero-actions" data-anim="download">
+        <a class="btn btn-ink btn-download" href="https://github.com/snapALOS/MakerMind-App/releases/download/v0.1.0-beta.1/MakerMind.AI-0.1.0-beta-universal.dmg">
+          <span class="btn-label">Download Mac Beta</span>
+          <span class="btn-arrow" aria-hidden="true">↓</span>
+        </a>
+        <a class="btn btn-soft" href="#waitlist">
+          <span class="btn-label">Join Beta Updates</span>
+        </a>
+      </div>
+      <p class="download-mini" data-anim="download-note">Universal macOS beta for Apple Silicon and Intel. Signed and notarized.</p>
+
       <form class="email-form" id="hero-form" data-form="hero" data-anim="form" novalidate>
         <div class="email-row">
           <input type="email" name="email" placeholder="your@studio.com" required class="email-input" aria-label="Your email address" />
           <button type="submit" class="btn btn-ink">
-            <span class="btn-label">Join the Waitlist</span>
+            <span class="btn-label">Join Beta Updates</span>
             <span class="btn-arrow" aria-hidden="true">→</span>
           </button>
         </div>
-        <p class="email-note">No spam. Just the launch. Unsubscribe anytime.</p>
+        <p class="email-note">No spam. Product updates, beta notes, and release news only.</p>
         <div class="email-success" hidden aria-live="polite">
           <span class="check-mark" aria-hidden="true">✦</span>
-          You're on the list — we'll be in touch before launch.
+          You're on the list — we'll send beta updates from MakerMind.
         </div>
       </form>
     </div>
@@ -253,10 +264,54 @@
 <div class="proof-strip">
   <div class="container">
     <p class="proof-content reveal">
-      Join the makers already tracking their studio on the protocol.
+      The Mac beta is open for maker studios ready to track inventory, orders, batches, and margins in one place.
     </p>
   </div>
 </div>
+
+
+<!--═══════════════════════════════════════════════════════════════
+    05B — DOWNLOAD
+═══════════════════════════════════════════════════════════════-->
+<section class="download" id="download">
+  <div class="container download-grid">
+    <div class="download-copy reveal">
+      <p class="section-label">Beta Download</p>
+      <h2 class="download-headline">MakerMind AI v0.1 beta is ready for your Mac.</h2>
+      <p class="download-body">Install the signed, notarized universal build and sign in with your MakerMind account. The same download works on Apple Silicon and Intel Macs.</p>
+      <ul class="download-list">
+        <li>Universal macOS build for newer and older Macs</li>
+        <li>30-day free trial, then $19.99/month</li>
+        <li>Studio data stays tied to your account for safer updates</li>
+      </ul>
+    </div>
+
+    <aside class="download-card reveal" aria-label="MakerMind Mac beta download">
+      <p class="download-kicker">macOS Universal</p>
+      <h3 class="download-title">MakerMind AI<br>0.1.0 Beta</h3>
+      <a class="btn btn-ink btn-full" href="https://github.com/snapALOS/MakerMind-App/releases/download/v0.1.0-beta.1/MakerMind.AI-0.1.0-beta-universal.dmg">
+        <span class="btn-label">Download .dmg</span>
+        <span class="btn-arrow" aria-hidden="true">↓</span>
+      </a>
+      <a class="download-release" href="https://github.com/snapALOS/MakerMind-App/releases/tag/v0.1.0-beta.1" target="_blank" rel="noopener">View release notes</a>
+      <dl class="download-meta">
+        <div>
+          <dt>Version</dt>
+          <dd>v0.1.0-beta.1</dd>
+        </div>
+        <div>
+          <dt>File</dt>
+          <dd>200 MB</dd>
+        </div>
+        <div>
+          <dt>SHA-256</dt>
+          <dd class="checksum">0fd49e6bbd6ff4e7c249c88eebcc2b1799c076286a216ec30727041858fe907f</dd>
+        </div>
+      </dl>
+      <p class="download-note">Mac App Store distribution is planned after beta hardening.</p>
+    </aside>
+  </div>
+</section>
 
 
 <!--═══════════════════════════════════════════════════════════════
@@ -480,19 +535,29 @@
   <div class="final-inner">
     <p class="section-label final-label reveal">Studio Protocol v0.1</p>
     <h2 class="final-headline reveal">Ready for your studio to work<br><em>as beautifully as it makes?</em></h2>
-    <p class="final-sub reveal">Be among the first makers on the list.</p>
+    <p class="final-sub reveal">Download the Mac beta or stay close to the release notes.</p>
+
+    <div class="final-actions reveal">
+      <a class="btn btn-accent" href="https://github.com/snapALOS/MakerMind-App/releases/download/v0.1.0-beta.1/MakerMind.AI-0.1.0-beta-universal.dmg">
+        <span class="btn-label">Download Mac Beta</span>
+        <span class="btn-arrow" aria-hidden="true">↓</span>
+      </a>
+      <a class="btn btn-dark-soft" href="#protocol">
+        <span class="btn-label">Join Updates</span>
+      </a>
+    </div>
 
     <form class="email-form email-form-dark reveal" id="cta-form" data-form="final-cta" novalidate>
       <div class="email-row">
         <input type="email" name="email" placeholder="your@studio.com" required class="email-input email-input-dark" aria-label="Your email address" />
         <button type="submit" class="btn btn-accent">
-          <span class="btn-label">Join the Waitlist</span>
+          <span class="btn-label">Join Beta Updates</span>
           <span class="btn-arrow" aria-hidden="true">→</span>
         </button>
       </div>
       <div class="email-success email-success-dark" hidden aria-live="polite">
         <span class="check-mark" aria-hidden="true">✦</span>
-        You're on the list. We'll be in touch before launch day.
+        You're on the list. We'll send beta updates from MakerMind.
       </div>
     </form>
   </div>
@@ -520,14 +585,15 @@
         <svg class="footer-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.247 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.332 2.633-1.308 3.608-.975.975-2.242 1.247-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.247-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.247 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.977 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.351-.2 6.78-2.618 6.98-6.98.058-1.28.072-1.689.072-4.948s-.014-3.667-.072-4.947c-.2-4.361-2.618-6.78-6.98-6.98C15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
         <span>Instagram</span>
       </a>
+      <a href="https://github.com/snapALOS/MakerMind-App/releases/tag/v0.1.0-beta.1" class="footer-link" target="_blank" rel="noopener">Download</a>
       <a href="https://producthunt.com" class="footer-link" target="_blank" rel="noopener">ProductHunt</a>
-      <a href="mailto:hello@makermind.ai" class="footer-link">Contact</a>
+      <a href="mailto:info@makermind.studio" class="footer-link">Contact</a>
     </nav>
   </div>
   <div class="footer-bottom">
     <div class="footer-rule" aria-hidden="true"></div>
     <div class="footer-meta">
-      <span class="footer-stamp">Studio Protocol v0.1 — Coming Soon</span>
+      <span class="footer-stamp">Studio Protocol v0.1 — Mac Beta Available</span>
       <span class="footer-copy">© 2026 MakerMind. For the modern studio.</span>
     </div>
   </div>
